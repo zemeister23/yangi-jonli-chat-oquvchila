@@ -8,6 +8,7 @@ var app = require('../app');
 var debug = require('debug')('yangi-project-chat:server');
 var http = require('http');
 
+
 /**
  * Get port from environment and store in Express.
  */
@@ -28,6 +29,17 @@ var server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
+
+//----------------------------------------------------->
+/**
+ * socketio
+ */
+
+const socketApi = require('../src/socketApi');
+const io = socketApi.io;
+io.attach(server);
+//-------------------------------------------------------->
+
 
 /**
  * Normalize a port into a number, string, or false.
