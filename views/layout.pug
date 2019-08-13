@@ -3,8 +3,16 @@ html
   head
     title= title
     meta(charset='UTF-8')
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    block stylesheets
+      link(rel='stylesheet', href='/semantic/dist/semantic.min.css')
+      link(rel='stylesheet', href='/stylesheets/style.css')
 
-  body
+  body(ng-app='app')
     block content
+
+
+    block javascripts
+      script(src='/angular/angular.min.js')
+      script(src='/javascripts/main.js')
+      script(src='/javascripts/indexController.js')
+

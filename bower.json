@@ -1,0 +1,14 @@
+{
+  "name": "yangi-project-chat",
+  "description": "",
+  "main": "",
+  "authors": [
+    "zemeister23 <sauda2332@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/zemeister23/yangi-jonli-chat-oquvchila",
+  "dependencies": {
+    "angular": "^1.7.8",
+    "semantic": "^2.4.1"
+  }
+}
